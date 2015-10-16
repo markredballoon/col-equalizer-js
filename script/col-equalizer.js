@@ -33,7 +33,7 @@ function colEqualizer(selector, lowerBreakpoint, upperBreakpoint){
 			n = n + 9999;
 		};
 	};
-	console.log(noColumn);
+	//console.log(noColumn);
 
 	// Number of rows
 	noRows = Math.ceil( noElements / noColumn );
@@ -48,11 +48,13 @@ function colEqualizer(selector, lowerBreakpoint, upperBreakpoint){
 			upperBound = upperBreakpoint;
 		} 
 		else{
-			console.log('Incorrect breakpoints');
+			console.log('col-equalizer: Breakpoints not set up correctly. Make sure that the upper breakpoint is higher than the lower breakpoint');
 		};
 	}
 	else{
-		console.log('No breakpoints');
+		if (typeof lowerBreakpoint === 'number' || typeof upperBreakpoint === 'number') {
+			console.log('col-equalizer: Breakpoints not set up correctly. Make sure you set both an upper and lower breakpoint.');
+		};
 	};
 
 
@@ -91,7 +93,7 @@ function resizeElementHeight(){
 		};
 	};
 
-	console.log(noColumn);
+	//console.log(noColumn);
 	noRows = Math.ceil( noElements / noColumn );
 
 	for (var row = 0; row < noRows; row++) {
@@ -147,10 +149,6 @@ function resetHeight(){
 		};
 	}
 };
-
-jQuery(document).ready(function($) {
-	console.log('loaded')
-});
 
 /* 
 Known bugs:

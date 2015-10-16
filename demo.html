@@ -130,9 +130,11 @@
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="script/col-equalizer.js"></script>
+<script src="script/col-equalizer.min.js"></script>
 
 <script>
+
+// Use these 2 lines of JS to initilize the plugin. It must be run after jQuery and col-equalizer.js.
 jQuery(window).load(function($) {
 	colEqualizer('#grid-area .col');
 });
