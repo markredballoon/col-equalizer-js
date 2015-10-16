@@ -35,8 +35,8 @@ header h1{
 }
 #grid-area .col .img-wrap{
 	width: 100%;
-	height: 200px;
-	overflow:hidden;
+	height: auto;
+	/*overflow:hidden;*/
 }
 #grid-area .col .img-wrap img{
 	width: 100%;
